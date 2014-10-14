@@ -16,6 +16,8 @@
 		A7696AF41396A4390065C698 /* WindowDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = A7696AF31396A4390065C698 /* WindowDefaults.m */; };
 		A769708D1396EEA50065C698 /* WindowContextMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = A769708C1396EEA50065C698 /* WindowContextMenu.m */; };
 		A76977861397DA3B0065C698 /* screen.icns in Resources */ = {isa = PBXBuildFile; fileRef = A76977851397DA3B0065C698 /* screen.icns */; };
+		E4F45ECB19EDDABB00A0B874 /* BarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4F45ECA19EDDABB00A0B874 /* BarController.m */; };
+		E4F45ECE19EDDB1400A0B874 /* ClockTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = E4F45ECD19EDDB1400A0B874 /* ClockTimer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,10 @@
 		A769708B1396EEA50065C698 /* WindowContextMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowContextMenu.h; sourceTree = "<group>"; };
 		A769708C1396EEA50065C698 /* WindowContextMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindowContextMenu.m; sourceTree = "<group>"; };
 		A76977851397DA3B0065C698 /* screen.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = screen.icns; sourceTree = "<group>"; };
+		E4F45EC919EDDABB00A0B874 /* BarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarController.h; sourceTree = "<group>"; };
+		E4F45ECA19EDDABB00A0B874 /* BarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarController.m; sourceTree = "<group>"; };
+		E4F45ECC19EDDB1400A0B874 /* ClockTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockTimer.h; sourceTree = "<group>"; };
+		E4F45ECD19EDDB1400A0B874 /* ClockTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockTimer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,10 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E4F45ECC19EDDB1400A0B874 /* ClockTimer.h */,
+				E4F45ECD19EDDB1400A0B874 /* ClockTimer.m */,
+				E4F45EC919EDDABB00A0B874 /* BarController.h */,
+				E4F45ECA19EDDABB00A0B874 /* BarController.m */,
 				256AC3D80F4B6AC300CF3369 /* AppDelegate.h */,
 				256AC3D90F4B6AC300CF3369 /* AppDelegate.m */,
 				A7696AE51396A0D20065C698 /* Window.h */,
@@ -202,9 +212,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				E4F45ECB19EDDABB00A0B874 /* BarController.m in Sources */,
 				256AC3DA0F4B6AC300CF3369 /* AppDelegate.m in Sources */,
 				A7696AE71396A0D20065C698 /* Window.m in Sources */,
 				A7696AF41396A4390065C698 /* WindowDefaults.m in Sources */,
+				E4F45ECE19EDDB1400A0B874 /* ClockTimer.m in Sources */,
 				A769708D1396EEA50065C698 /* WindowContextMenu.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

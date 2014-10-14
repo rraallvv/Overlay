@@ -1,6 +1,7 @@
 #import "AppDelegate.h"
 #import "WindowDefaults.h"
 #import "Window.h"
+#import "BarController.h"
 
 @implementation OverlayAppDelegate {
 	NSMutableArray *defaultWindowPreferences;
@@ -11,6 +12,29 @@
 }
 
 @synthesize windows;
+
+- (void)awakeFromNib {
+	windows = [[[NSMutableArray alloc] init] retain];
+	defaultWindowPreferences = [[[NSMutableArray alloc] init] retain];
+	//get any previous windows that were overlayed and load them.
+	NSData *preferencesAtLoad = [[NSUserDefaults standardUserDefaults] objectForKey:OVERLAY_DEFAULTSKEY_WINDOWS];
+	if (preferencesAtLoad != nil)
+	{
+		NSArray *windowsFromPreferences = [NSKeyedUnarchiver unarchiveObjectWithData:preferencesAtLoad];
+		if (windowsFromPreferences != nil && [windowsFromPreferences isKindOfClass:[NSArray class]] && windowsFromPreferences.count) {
+			[self createNewOverlayWindowWithDefaults:[windowsFromPreferences lastObject] withoutNotification:NO];
+		}
+	}
+	
+	self.statusBar = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+	self.statusBar.title = @"Overlay";
+	
+	// TODO: set icon
+	//self.statusBar.image =
+	
+	self.statusBar.menu = self.statusMenu;
+	self.statusBar.highlightMode = YES;
+}
 
 - (void)dealloc {
 	[windows release];
@@ -40,20 +64,6 @@
 	for (OverlayWindow *window in windows) {
 		if (window != nil)
 			[window setIgnoresMouseEvents:YES];
-	}
-}
-
-- (void)awakeFromNib {
-	windows = [[[NSMutableArray alloc] init] retain];
-	defaultWindowPreferences = [[[NSMutableArray alloc] init] retain];
-	//get any previous windows that were overlayed and load them.
-	NSData *preferencesAtLoad = [[NSUserDefaults standardUserDefaults] objectForKey:OVERLAY_DEFAULTSKEY_WINDOWS];
-	if (preferencesAtLoad != nil)
-	{
-		NSArray *windowsFromPreferences = [NSKeyedUnarchiver unarchiveObjectWithData:preferencesAtLoad];
-		if (windowsFromPreferences != nil && [windowsFromPreferences isKindOfClass:[NSArray class]] && windowsFromPreferences.count) {
-			[self createNewOverlayWindowWithDefaults:[windowsFromPreferences lastObject] withoutNotification:NO];
-		}
 	}
 }
 
@@ -124,4 +134,5 @@
 	//NSLog(@"Saving these: %@", unmutableArray);
 	[[NSUserDefaults standardUserDefaults] setObject:[NSKeyedArchiver archivedDataWithRootObject:unmutableArray] forKey:OVERLAY_DEFAULTSKEY_WINDOWS];
 }
+
 @end
