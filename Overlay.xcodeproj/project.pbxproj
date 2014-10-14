@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
-		256AC3DA0F4B6AC300CF3369 /* OverlayAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* OverlayAppDelegate.m */; };
+		256AC3DA0F4B6AC300CF3369 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* AppDelegate.m */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		A7696AE71396A0D20065C698 /* OverlayWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = A7696AE61396A0D20065C698 /* OverlayWindow.m */; };
-		A7696AF41396A4390065C698 /* OverlayWindowDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = A7696AF31396A4390065C698 /* OverlayWindowDefaults.m */; };
-		A769708D1396EEA50065C698 /* OverlayWindowContextMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = A769708C1396EEA50065C698 /* OverlayWindowContextMenu.m */; };
+		A7696AE71396A0D20065C698 /* Window.m in Sources */ = {isa = PBXBuildFile; fileRef = A7696AE61396A0D20065C698 /* Window.m */; };
+		A7696AF41396A4390065C698 /* WindowDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = A7696AF31396A4390065C698 /* WindowDefaults.m */; };
+		A769708D1396EEA50065C698 /* WindowContextMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = A769708C1396EEA50065C698 /* WindowContextMenu.m */; };
 		A76977861397DA3B0065C698 /* screen.icns in Resources */ = {isa = PBXBuildFile; fileRef = A76977851397DA3B0065C698 /* screen.icns */; };
 /* End PBXBuildFile section */
 
@@ -23,20 +23,20 @@
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		256AC3D80F4B6AC300CF3369 /* OverlayAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayAppDelegate.h; sourceTree = "<group>"; };
-		256AC3D90F4B6AC300CF3369 /* OverlayAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayAppDelegate.m; sourceTree = "<group>"; };
+		256AC3D80F4B6AC300CF3369 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		256AC3D90F4B6AC300CF3369 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		256AC3F00F4B6AF500CF3369 /* Overlay_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Overlay_Prefix.pch; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		8D1107310486CEB800E47090 /* Overlay-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Overlay-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Overlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Overlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A7696AE51396A0D20065C698 /* OverlayWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayWindow.h; sourceTree = "<group>"; };
-		A7696AE61396A0D20065C698 /* OverlayWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayWindow.m; sourceTree = "<group>"; };
-		A7696AF21396A4390065C698 /* OverlayWindowDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayWindowDefaults.h; sourceTree = "<group>"; };
-		A7696AF31396A4390065C698 /* OverlayWindowDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayWindowDefaults.m; sourceTree = "<group>"; };
-		A769708B1396EEA50065C698 /* OverlayWindowContextMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayWindowContextMenu.h; sourceTree = "<group>"; };
-		A769708C1396EEA50065C698 /* OverlayWindowContextMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayWindowContextMenu.m; sourceTree = "<group>"; };
+		A7696AE51396A0D20065C698 /* Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Window.h; sourceTree = "<group>"; };
+		A7696AE61396A0D20065C698 /* Window.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Window.m; sourceTree = "<group>"; };
+		A7696AF21396A4390065C698 /* WindowDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowDefaults.h; sourceTree = "<group>"; };
+		A7696AF31396A4390065C698 /* WindowDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindowDefaults.m; sourceTree = "<group>"; };
+		A769708B1396EEA50065C698 /* WindowContextMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowContextMenu.h; sourceTree = "<group>"; };
+		A769708C1396EEA50065C698 /* WindowContextMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindowContextMenu.m; sourceTree = "<group>"; };
 		A76977851397DA3B0065C698 /* screen.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = screen.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,14 +55,14 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				256AC3D80F4B6AC300CF3369 /* OverlayAppDelegate.h */,
-				256AC3D90F4B6AC300CF3369 /* OverlayAppDelegate.m */,
-				A7696AE51396A0D20065C698 /* OverlayWindow.h */,
-				A7696AE61396A0D20065C698 /* OverlayWindow.m */,
-				A7696AF21396A4390065C698 /* OverlayWindowDefaults.h */,
-				A7696AF31396A4390065C698 /* OverlayWindowDefaults.m */,
-				A769708B1396EEA50065C698 /* OverlayWindowContextMenu.h */,
-				A769708C1396EEA50065C698 /* OverlayWindowContextMenu.m */,
+				256AC3D80F4B6AC300CF3369 /* AppDelegate.h */,
+				256AC3D90F4B6AC300CF3369 /* AppDelegate.m */,
+				A7696AE51396A0D20065C698 /* Window.h */,
+				A7696AE61396A0D20065C698 /* Window.m */,
+				A7696AF21396A4390065C698 /* WindowDefaults.h */,
+				A7696AF31396A4390065C698 /* WindowDefaults.m */,
+				A769708B1396EEA50065C698 /* WindowContextMenu.h */,
+				A769708C1396EEA50065C698 /* WindowContextMenu.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -202,10 +202,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
-				256AC3DA0F4B6AC300CF3369 /* OverlayAppDelegate.m in Sources */,
-				A7696AE71396A0D20065C698 /* OverlayWindow.m in Sources */,
-				A7696AF41396A4390065C698 /* OverlayWindowDefaults.m in Sources */,
-				A769708D1396EEA50065C698 /* OverlayWindowContextMenu.m in Sources */,
+				256AC3DA0F4B6AC300CF3369 /* AppDelegate.m in Sources */,
+				A7696AE71396A0D20065C698 /* Window.m in Sources */,
+				A7696AF41396A4390065C698 /* WindowDefaults.m in Sources */,
+				A769708D1396EEA50065C698 /* WindowContextMenu.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

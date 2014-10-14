@@ -1,4 +1,4 @@
-#import "OverlayWindowDefaults.h"
+#import "WindowDefaults.h"
 
 @implementation OverlayWindowDefaults {
 	NSString *imageLocation;

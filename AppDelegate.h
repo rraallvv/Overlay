@@ -1,5 +1,5 @@
 #import <Cocoa/Cocoa.h>
-#import "OverlayWindow.h"
+#import "Window.h"
 
 @interface OverlayAppDelegate : NSObject <NSApplicationDelegate>
 

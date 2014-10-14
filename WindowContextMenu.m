@@ -1,5 +1,5 @@
-#import "OverlayWindowContextMenu.h"
-#import "OverlayWindow.h"
+#import "WindowContextMenu.h"
+#import "Window.h"
 
 @implementation OverlayWindowContextMenu {
 	NSMenuItem *showAlphaSliderItem;

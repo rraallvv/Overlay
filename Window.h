@@ -1,5 +1,5 @@
 #import <Cocoa/Cocoa.h>
-#import "OverlayWindowDefaults.h"
+#import "WindowDefaults.h"
 
 @interface OverlayWindow : NSWindow
 

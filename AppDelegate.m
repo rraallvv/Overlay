@@ -1,6 +1,6 @@
-#import "OverlayAppDelegate.h"
-#import "OverlayWindowDefaults.h"
-#import "OverlayWindow.h"
+#import "AppDelegate.h"
+#import "WindowDefaults.h"
+#import "Window.h"
 
 @implementation OverlayAppDelegate {
 	NSMutableArray *defaultWindowPreferences;

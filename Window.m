@@ -1,6 +1,6 @@
-#import "OverlayWindow.h"
+#import "Window.h"
 #import <AppKit/AppKit.h>
-#import "OverlayWindowContextMenu.h"
+#import "WindowContextMenu.h"
 
 
 @implementation OverlayWindow {
