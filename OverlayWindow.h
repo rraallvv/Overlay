@@ -1,26 +1,8 @@
-//
-//  OverlayWindow.h
-//  Overlay
-//
-//  Created by Oliver Wilkerson on 6/1/11.
-//  Copyright 2011 Oliver Wilkerson. All rights reserved.
-//
-
 #import <Cocoa/Cocoa.h>
 #import "OverlayWindowDefaults.h"
 
-@interface OverlayWindow : NSWindow {
-	OverlayWindowDefaults *defaultSettings;
-	NSSlider *alphaSlider;
-	NSImage *image;
-	CGFloat alphaSnapshot;
-	BOOL alwaysOnTop;
-	BOOL alphaSliderVisible;
-	NSPoint initialLocation;
-	NSTimer *fadeTimer;
-	NSTimer *reapearTimer;
-	BOOL shouldReapear;
-}
+@interface OverlayWindow : NSWindow
+
 @property (assign) BOOL alwaysOnTop;
 @property (assign) BOOL alphaSliderVisible;
 @property (assign) OverlayWindowDefaults *defaultSettings;
@@ -32,4 +14,5 @@
 -(void)toggleAlwaysOnTop;
 -(void)toggleAlphaSlider;
 -(void)setAlwaysOnTop:(BOOL)alwaysOnTopState withoutNotification:(BOOL)silent;
+
 @end

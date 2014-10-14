@@ -1,15 +1,10 @@
-//
-//  OverlayWindowDefaults.m
-//  Overlay
-//
-//  Created by Oliver Wilkerson on 6/1/11.
-//  Copyright 2011 Oliver Wilkerson. All rights reserved.
-//
-
 #import "OverlayWindowDefaults.h"
 
-
-@implementation OverlayWindowDefaults
+@implementation OverlayWindowDefaults {
+	NSString *imageLocation;
+	CGFloat defaultAlpha;
+	BOOL alwaysOnTop;
+}
 
 @synthesize imageLocation;
 @synthesize defaultAlpha;

@@ -1,16 +1,14 @@
-//
-//  OverlayAppDelegate.m
-//  Overlay
-//
-//  Created by Oliver Wilkerson on 6/1/11.
-//  Copyright 2011 Oliver Wilkerson. All rights reserved.
-//
-
 #import "OverlayAppDelegate.h"
 #import "OverlayWindowDefaults.h"
 #import "OverlayWindow.h"
 
-@implementation OverlayAppDelegate
+@implementation OverlayAppDelegate {
+	NSMutableArray *defaultWindowPreferences;
+	NSMutableArray *windows;
+	NSOpenPanel *openDialog;
+	BOOL applicationIsActive;
+	BOOL willTerminate;
+}
 
 @synthesize windows;
 

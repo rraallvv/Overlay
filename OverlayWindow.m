@@ -1,17 +1,20 @@
-//
-//  OverlayWindow.m
-//  Overlay
-//
-//  Created by Oliver Wilkerson on 6/1/11.
-//  Copyright 2011 Oliver Wilkerson. All rights reserved.
-//
-
 #import "OverlayWindow.h"
 #import <AppKit/AppKit.h>
 #import "OverlayWindowContextMenu.h"
 
 
-@implementation OverlayWindow
+@implementation OverlayWindow {
+	OverlayWindowDefaults *defaultSettings;
+	NSSlider *alphaSlider;
+	NSImage *image;
+	CGFloat alphaSnapshot;
+	BOOL alwaysOnTop;
+	BOOL alphaSliderVisible;
+	NSPoint initialLocation;
+	NSTimer *fadeTimer;
+	NSTimer *reapearTimer;
+	BOOL shouldReapear;
+}
 
 @synthesize alwaysOnTop;
 @synthesize defaultSettings;

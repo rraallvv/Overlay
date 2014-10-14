@@ -1,16 +1,12 @@
-//
-//  OverlayWindowContextMenu.m
-//  Overlay
-//
-//  Created by Oliver Wilkerson on 6/1/11.
-//  Copyright 2011 Oliver Wilkerson. All rights reserved.
-//
-
 #import "OverlayWindowContextMenu.h"
 #import "OverlayWindow.h"
 
-
-@implementation OverlayWindowContextMenu
+@implementation OverlayWindowContextMenu {
+	NSMenuItem *showAlphaSliderItem;
+	NSMenuItem *alwaysOnTopItem;
+	NSMenuItem *closeItem;
+	OverlayWindow *parentWindow;
+}
 
 @synthesize alwaysOnTopItem;
 @synthesize closeItem;
