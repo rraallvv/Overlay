@@ -75,18 +75,13 @@
 	[openDialog setCanChooseDirectories:NO];
 	[openDialog setAllowedFileTypes:fileTypes];
 	[openDialog setAllowsOtherFileTypes:NO];
-	[openDialog setAllowsMultipleSelection:YES];
+	[openDialog setAllowsMultipleSelection:NO];
 	
-	if ( [openDialog runModalForDirectory:nil file:nil types:fileTypes] == NSOKButton )
+	if ( [openDialog runModal] == NSOKButton )
 	{
 		//we'll create an OverlayWindow for each of the files selected
-		NSArray* files = [openDialog filenames];
-		
-		for(NSInteger i = 0; i < [files count]; i++ )
-		{
-			NSString* fileName = [[[NSString alloc] initWithString:[files objectAtIndex:i]] retain];
-			[self createNewOverlayWindowWithLocation:fileName andAlpha:0.8 andAlwaysOnTop:YES];
-		}
+		NSString* fileName = [[[NSString alloc] initWithString:[[[openDialog URLs] firstObject] path]] retain];
+		[self createNewOverlayWindowWithLocation:fileName andAlpha:0.8 andAlwaysOnTop:YES];
 	}
 	[self saveSettings];
 }

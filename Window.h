@@ -3,8 +3,8 @@
 
 @interface OverlayWindow : NSWindow
 
-@property (assign) BOOL alwaysOnTop;
-@property (assign) BOOL alphaSliderVisible;
+@property (nonatomic, assign) BOOL alwaysOnTop;
+@property (nonatomic, assign) BOOL alphaSliderVisible;
 @property (assign) OverlayWindowDefaults *defaultSettings;
 
 +(OverlayWindow *)initWithDefaults:(OverlayWindowDefaults *)newDefaults;
