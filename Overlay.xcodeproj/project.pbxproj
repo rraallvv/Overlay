@@ -16,6 +16,7 @@
 		A7696AF41396A4390065C698 /* WindowDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = A7696AF31396A4390065C698 /* WindowDefaults.m */; };
 		A769708D1396EEA50065C698 /* WindowContextMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = A769708C1396EEA50065C698 /* WindowContextMenu.m */; };
 		A76977861397DA3B0065C698 /* screen.icns in Resources */ = {isa = PBXBuildFile; fileRef = A76977851397DA3B0065C698 /* screen.icns */; };
+		E4D753E519F533AE00313870 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4D753E419F533AE00313870 /* QuartzCore.framework */; };
 		E4F45ECB19EDDABB00A0B874 /* BarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4F45ECA19EDDABB00A0B874 /* BarController.m */; };
 		E4F45ECE19EDDB1400A0B874 /* ClockTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = E4F45ECD19EDDB1400A0B874 /* ClockTimer.m */; };
 /* End PBXBuildFile section */
@@ -40,6 +41,8 @@
 		A769708B1396EEA50065C698 /* WindowContextMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowContextMenu.h; sourceTree = "<group>"; };
 		A769708C1396EEA50065C698 /* WindowContextMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindowContextMenu.m; sourceTree = "<group>"; };
 		A76977851397DA3B0065C698 /* screen.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = screen.icns; sourceTree = "<group>"; };
+		E4D753E219F5336600313870 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		E4D753E419F533AE00313870 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		E4F45EC919EDDABB00A0B874 /* BarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarController.h; sourceTree = "<group>"; };
 		E4F45ECA19EDDABB00A0B874 /* BarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarController.m; sourceTree = "<group>"; };
 		E4F45ECC19EDDB1400A0B874 /* ClockTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockTimer.h; sourceTree = "<group>"; };
@@ -52,6 +55,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				E4D753E519F533AE00313870 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +142,8 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E4D753E419F533AE00313870 /* QuartzCore.framework */,
+				E4D753E219F5336600313870 /* CoreMedia.framework */,
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);

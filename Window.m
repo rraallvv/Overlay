@@ -2,6 +2,7 @@
 #import <AppKit/AppKit.h>
 #import "WindowContextMenu.h"
 
+#define kShakeCount 5
 
 @implementation OverlayWindow {
 	OverlayWindowDefaults *defaultSettings;
@@ -14,6 +15,10 @@
 	NSTimer *fadeTimer;
 	NSTimer *reapearTimer;
 	BOOL shouldReapear;
+	NSMutableArray *timeStamps;
+	int index;
+	NSPoint lastPos;
+	NSPoint lastVec;
 }
 
 @synthesize alwaysOnTop;
@@ -24,6 +29,7 @@
 	[image release];
 	[defaultSettings release];
 	[alphaSlider release];
+	[timeStamps release];
 	[super dealloc];
 }
 
@@ -103,6 +109,38 @@
 		pos.x -= imageSize.width/2;
 		pos.y -= imageSize.height/2;
 		[self setFrameOrigin:pos];
+		
+		if (!timeStamps)
+			timeStamps = [[NSMutableArray arrayWithCapacity:5] retain];
+		
+		NSPoint vec = {pos.x - lastPos.x, pos.y - lastPos.y};
+		float dotProduct = vec.x * lastVec.x + vec.y * lastVec.y;
+		
+		if (dotProduct < 0) {
+			CFTimeInterval timeStamp = CACurrentMediaTime();
+			
+			if (timeStamps.count < kShakeCount) {
+				[timeStamps addObject:[NSNumber numberWithFloat:timeStamp]];
+			}
+			else {
+				[timeStamps setObject:[NSNumber numberWithFloat:timeStamp] atIndexedSubscript:index];
+				int detections = 0;
+				for (int i = index; i<kShakeCount; i++) {
+					float diff = MAXFLOAT;
+					diff= [[timeStamps objectAtIndex:(i+1) % kShakeCount] floatValue] - [[timeStamps objectAtIndex:i] floatValue];
+					if (diff < 1.0f)
+						detections++;
+				}
+				if (detections >= kShakeCount)
+					[self reapear];
+			}
+			
+			index++;
+			index = index % kShakeCount;
+		}
+		
+		lastVec = vec;
+		lastPos = pos;
 		
 		if (shouldReapear)
 			[self reapear];
