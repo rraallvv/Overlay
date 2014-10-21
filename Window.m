@@ -2,7 +2,8 @@
 #import <AppKit/AppKit.h>
 #import "WindowContextMenu.h"
 
-#define kShakeCount 5
+#define kShakeCount		5
+#define kShapeThreshold	1.0f
 
 @implementation OverlayWindow {
 	OverlayWindowDefaults *defaultSettings;
@@ -125,18 +126,18 @@
 			else {
 				[timeStamps setObject:[NSNumber numberWithFloat:timeStamp] atIndexedSubscript:index];
 				int detections = 0;
-				for (int i = index; i<kShakeCount; i++) {
-					float diff = MAXFLOAT;
-					diff= [[timeStamps objectAtIndex:(i+1) % kShakeCount] floatValue] - [[timeStamps objectAtIndex:i] floatValue];
-					if (diff < 1.0f)
+				for (int i = 0; i<kShakeCount; i++) {
+					float diff = [[timeStamps objectAtIndex:(i+1) % kShakeCount] floatValue] - [[timeStamps objectAtIndex:i] floatValue];
+					if (diff > 0.0f && diff < kShapeThreshold)
 						detections++;
 				}
-				if (detections >= kShakeCount)
+				if (detections >= kShakeCount - 1) {
+					[timeStamps removeAllObjects];
 					[self reapear];
+				}
 			}
 			
-			index++;
-			index = index % kShakeCount;
+			index = ++index % kShakeCount;
 		}
 		
 		lastVec = vec;
