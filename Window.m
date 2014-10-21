@@ -2,8 +2,8 @@
 #import <AppKit/AppKit.h>
 #import "WindowContextMenu.h"
 
-#define kShakeCount		5
-#define kShapeThreshold	1.0f
+#define kShakeCount			5
+#define kShapeThreshold		0.25f//0.5f//1.0f
 
 @implementation OverlayWindow {
 	OverlayWindowDefaults *defaultSettings;
