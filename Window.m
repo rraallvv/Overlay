@@ -109,8 +109,7 @@
 		NSPoint pos = {location.x, location.y};
 		pos.x -= imageSize.width/2;
 		pos.y -= imageSize.height/2;
-		[self setFrameOrigin:pos];
-		
+
 		if (!timeStamps)
 			timeStamps = [[NSMutableArray arrayWithCapacity:5] retain];
 		
@@ -178,10 +177,12 @@
 -(void) fadeTimer:(NSTimer*)timer {
 	if (self.alphaValue > 0.0) {
 		self.alphaValue -= 0.05;
+		[self setFrameOrigin:lastPos];
 	}
 	else {
 		[fadeTimer invalidate];
 		fadeTimer = nil;
+		[self setFrameOrigin:NSPointFromCGPoint(CGPointZero)];
 	}
 }
 
